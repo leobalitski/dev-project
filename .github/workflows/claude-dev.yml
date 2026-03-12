@@ -2,12 +2,15 @@ name: Claude AI Dev
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
   claude-review:
     runs-on: ubuntu-latest
-
 
     steps:
       - name: Checkout repo
@@ -62,3 +65,4 @@ print(review)
 with open("review.txt","w") as f:
     f.write(review)
 EOF
+
