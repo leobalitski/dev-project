@@ -8,7 +8,6 @@ jobs:
   claude-review:
     runs-on: ubuntu-latest
 
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -62,3 +61,4 @@ print(review)
 with open("review.txt","w") as f:
     f.write(review)
 EOF
+
