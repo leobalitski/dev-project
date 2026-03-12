@@ -2,7 +2,11 @@ name: Claude AI Dev
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
   claude-review:
